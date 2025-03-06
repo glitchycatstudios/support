@@ -1,3 +1,6 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 big{
     visibility: visible;
 }
@@ -35,6 +38,11 @@ big nav ul li a button{
 big nav ul li a button:hover{
     border-color: rgb(196, 31, 234);
 }
+.active{
+    background-color: rgb(234, 237, 14);
+    color: black;
+    border-color: black;
+}
 big nav ul li img{
     border-radius: 10px;
     left: 10px;
@@ -43,6 +51,7 @@ big nav ul li img{
     vertical-align: middle;
 }
 .burger-menu {
+    visibility: collapse;
     display: none;
     font-size: 30px;
     cursor: pointer;
@@ -55,15 +64,84 @@ big nav ul li img{
 small{
     visibility: collapse;
 }
+.smallimg{
+    visibility: collapse;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+small nav{
+    background-color: rgb(121, 115, 115);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+small nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+small nav ul li{
+    margin: 0 10px;
+}
+small nav ul li a{
+    display: inline-block;
+}
+small nav ul li a button{
+    color: white;
+    background-color: rgb(100, 97, 97);
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    margin: auto;
+}
+small nav ul li a button:hover{
+    border-color: rgb(196, 31, 234);
+}
+.container{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgb(121, 115, 115);
+    margin: auto;
+}
+.container a button{
+    color: white;
+    background-color: rgb(100, 97, 97);
+    height: 50px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+}
 @media screen and (max-width: 700px){
     big{
         visibility: collapse;
     }
     .burger-menu {
+        visibility: visible;
         display: block;
     }
     small{
         visibility: visible;
         display: none;
+    }
+    .smallimg{
+        visibility: visible;
     }
 }
